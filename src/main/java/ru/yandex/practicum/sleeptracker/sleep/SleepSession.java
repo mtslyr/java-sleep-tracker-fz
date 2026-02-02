@@ -6,11 +6,11 @@ import java.time.format.DateTimeFormatter;
 
 public class SleepSession {
 
-    final static DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yy HH:mm");
+    static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yy HH:mm");
     private LocalDateTime sleepStart;
-    final private LocalDateTime sleepEnd;
-    final private Duration sleepDuration;
-    final private SleepType type;
+    private final LocalDateTime sleepEnd;
+    private final Duration sleepDuration;
+    private final SleepType type;
 
     public SleepSession(LocalDateTime sleepStart, LocalDateTime sleepEnd, Duration sleepDuration, SleepType type) {
         this.sleepStart = sleepStart;
