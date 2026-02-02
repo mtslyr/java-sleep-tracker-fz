@@ -16,6 +16,7 @@ public class SleepTrackerApp {
     static Path logFile;
     static List<SleepSession> sleepSessions;
     static List<SleepAnalysisFunction> functions = new LinkedList<>();
+
     public static void main(String[] args) {
         logFile = Paths.get(args[0]);
         addFunctions();
@@ -34,7 +35,7 @@ public class SleepTrackerApp {
     }
 
     public static void initSleepSessions() {
-        try (BufferedReader br = Files.newBufferedReader(logFile.toAbsolutePath()) ) {
+        try (BufferedReader br = Files.newBufferedReader(logFile.toAbsolutePath())) {
             sleepSessions = br.lines().map(SleepSession::new).toList();
         } catch (IOException e) {
             System.out.println("Лог файл не найден в директории 'src/main/resources'");
