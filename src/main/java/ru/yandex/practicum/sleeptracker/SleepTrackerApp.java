@@ -30,6 +30,7 @@ public class SleepTrackerApp {
         functions.add(new AverageSleepSessionFunc());
         functions.add(new TypeSessionCountFunc(SleepType.BAD));
         functions.add(new SleeplessNightsFunc());
+        functions.add(new UserChronotypeFunc());
     }
 
     public static void initSleepSessions() {
